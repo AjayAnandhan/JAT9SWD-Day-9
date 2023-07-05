@@ -2,44 +2,45 @@ package Sample;
 
 public class Q4 {
 
-    private static void displayUpperPart(int size)
-    {
-        int m, n;
-        for (m = size; m > 0; m--) {
-//            for (n = 0; n < m; n++) {
-//                System.out.print(" ");
-//            }
-
-            for (n = size; n < 0; n--) {
-                System.out.print("*" + " ");
-            }
-
-            System.out.println();
-        }
-    }
- 
-//    private static void displayLowerPart(int size)
-//    {
-//        int m, n;
-//        for (m = 1; m <= size; m++) {
-//
-//            for (n = 1; n < m; n++) {
-//                System.out.print(" ");
-//            }
-//
-//            for (n = m; n <= size; n++) {
-//                System.out.print("*" + " ");
-//            }
-//
-//            System.out.println();
-//        }
-//    }
-
-    public static void main(String[] args)
-    {
-        int size = 5;
-        displayUpperPart(size);
-        //displayLowerPart(size);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    	int n =5;
+    	
+    	int val = n+1;
+    	int i,j,k;
+    	int space = n;
+    	
+    	for(i=1; i<=n; i++) {
+    		
+    		if(i<=val/2) {
+    			
+    			for(j=1; j<=i; j++) {
+    				System.out.print(" ");
+    			}
+    			}
+    		else {
+    			for(j=i; j<val; j++) {
+    				System.out.print(" ");
+    			}
+    		}
+    		
+    		if(i != val/2) {
+    			System.out.print("*");
+    		}
+    		if(i<val/2) {
+    			space -= 2;
+    			for(k=1; k<=space; k++) {
+    				System.out.print(" ");
+    			}
+    		}
+    		if(i>val/2) {
+    			for(k = 1; k <= space; k++) {
+    				System.out.print(" ");
+    			}
+    			space += 2;
+    		}
+    		System.out.println("*");
+    	}
 	}
 
 }
